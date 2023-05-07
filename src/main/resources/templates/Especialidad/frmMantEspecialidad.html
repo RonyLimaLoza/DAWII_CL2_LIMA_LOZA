@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout::head">
+</head>
+<body>
+    <nav th:insert="layout::menu"></nav>
+    <div class="card ">
+        <div class="card-header text-bg-dark mb-3">
+            Lista de Especialidades
+        </div>
+        <div class="card-body">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Descripción</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="especialidad :${listaEspecialidades}">
+                    <td th:text="${especialidad.idesp}"></td>
+                    <td th:text="${especialidad.nomesp}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
