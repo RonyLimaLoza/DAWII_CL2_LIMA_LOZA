@@ -37,7 +37,7 @@ public class SecurityConfig {
                 .formLogin().loginPage("/auth/login")
                 .defaultSuccessUrl("/home")
                 .usernameParameter("nomusuario")
-                .passwordParameter("password")
+                .passwordParameter("passusuario")
                 .and()
                 .authenticationProvider(authenticationProvider());
         return http.build();
